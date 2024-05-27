@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import Permission
 
 """
 This module contains the base models for the provost app. These models are
@@ -12,14 +13,12 @@ everything raises NotImplementedError becasue we havent implemented it yet.
 
 
 class BaseObjectPermission(models.Model):
-    # TODO Implement base object permission model
-
     """
     Abstract ObjectPermission class. Actual class should additionally define
     a ``content_object`` field and either ``user`` or ``group`` field.
     """
 
-    # permission = models.ForeignKey(Permission, on_delete=models.CASCADE)
+    permission = models.ForeignKey(Permission, on_delete=models.CASCADE)
 
     class Meta:
         abstract = True
