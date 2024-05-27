@@ -19,61 +19,42 @@ we have no idea yet
 
 ## Installation
 
-### Dev Installation
+Run these commands to clone, install and setup your local development server
 
-1. clone repo
-2. create a venv
-
-```sh
-# inside `django-provost/` run
-
-$ > py -m venv venv # windows
-$ > python3 -m venv venv # linux/mac
-
-$ > pip install -r requirements.txt
-
-```
-
-### App installation
-
-to install `django-provost` simply run:
+> Note: for those using Windows you can replace occurences of the `python3` commands with `py`
 
 ```sh
-# this does not work yet as provost is not yet available from pipy
-$ > pip install django-provost
+# clone the repo
+$ git clone https://github.com/spaceCabbage/django-provost.git
+
+# navigate into the project root directory
+$ cd django-provost
+
+# create and activate a virtual environment\
+# Linux or Mac
+$ python3 -m venv venv
+$ source venv/bin/activate
+# windows
+$ py -m venv venv
+$ venv\Scripts\activate
+
+# Install dependencies
+$ pip install -r requirements.txt
+
+# run migrations
+$ python3 manage.py migrate
+
+# create a superuser account for yourself
+$ python3 manage.py createsuperuser
+
+# Generate fake user, post and comment data
+$ python3 manage.py populate
+
+# And finally
+# Run the dev server
+$ python3 manage.py runserver
+
 ```
-
-## Configuration
-
-We need to hook `django-provost` into our project.
-
-1. Put `provost` into your `INSTALLED_APPS` at settings module:
-
-```
-INSTALLED_APPS = (
- ...
- 'provost',
-)
-```
-
-2. Add extra authorization backend to your `settings.py`:
-
-```
-AUTHENTICATION_BACKENDS = (
-    'django.contrib.auth.backends.ModelBackend', # default
-    'provost.backends.ObjectPermissionBackend',
-)
-```
-
-3. Create `provost` database tables by running:
-
-```
-python manage.py migrate
-```
-
-### Usage
-
-just dont use this yet
 
 # Gameplan for django-provost
 
