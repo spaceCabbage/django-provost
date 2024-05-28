@@ -14,7 +14,7 @@ def post_list(request):
     post_list = []
 
     for post in posts:
-        comments = Comment.objects.filter(post=post)
+        comments = Comment.objects.filter(post=post).order_by("created_at")
         comment_list = [
             {
                 "content": comment.content,

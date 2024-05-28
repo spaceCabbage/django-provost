@@ -1,16 +1,21 @@
 {% extends 'core/base.html' %} {% block content %}
-<div>
-  <h1>{{ post.title }}</h1>
-  <p>{{ post.content }}</p>
-  <p>Posted by: {{ post.user }} on {{ post.created_at }}</p>
-
-  <h2>Comments:</h2>
-  <ul>
-    {% for comment in comments %}
-    <li class="comment">
-      {{ comment.content }} ({{ comment.user }} - {{ comment.created_at }})
-    </li>
-    {% endfor %}
-  </ul>
+<div class="centered-container">
+  <div class="main-app-card">
+      <a href="{% url 'post_list' %}" class="back-button">Back</a>
+      <span class="post-title">{{ post.title }}</span>
+      <p>Posted by: {{ post.user }} on {{ post.created_at }}</p>
+      <hr>
+      <p class="post-content">{{ post.content }}</p>
+      <br>
+      <p>Comments:</p>
+      <ul>
+        {% for comment in comments %}
+        <li class="comment">
+          {{ comment.content }} ({{ comment.user }} - {{ comment.created_at }})
+        </li>
+        {% endfor %}
+      </ul>
+  </div>
 </div>
+
 {% endblock %}

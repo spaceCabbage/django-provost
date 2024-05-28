@@ -1,8 +1,17 @@
 {% extends 'core/base.html' %}
 
 {% block content %}
-<div>
-  <h1>Home</h1>
+<div class="centered-container">
+<div class="prose main-app-card">
+  <h1>Welcome to <span class="emphasis">Provost</span></h1>
+  <p>A Django library for Obejct Level Permissions</p>
+  <hr>
+  <p class="">This is a hypothetical Django project called <span class="emphasis">Core</span>.</p>
+  <p> This project is designed to mimic the kind of project into which an end user would install <span class="emphasis">Provost</span>.</p>
+  <p>Check out the <a href="{% url 'post_list' %}">Posts</a> page to see these permissions in action.</p>
+  <p>Dont get too excited, nothing actually works yet.</p>
+
+</div>
 </div>
 
 {% endblock %}

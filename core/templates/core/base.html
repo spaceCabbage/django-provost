@@ -9,16 +9,21 @@
   </head>
   <body>
     <header>
-      <nav class="main-margins">
-        <a href="{% url 'home' %}">Home</a>
-        <a href="{% url 'post_list' %}">Posts</a>
-      </nav>
+      <div class="main-margins nav-bg">
+        <nav>
+          <span class="navlogo">Provost Core</span>
+          <div class="navlinks">
+            <a href="{% url 'home' %}">Home</a>
+            <a href="{% url 'post_list' %}">Posts</a>
+          </div>
+        </nav>
+      </div>
     </header>
 
     <main class="main-margins">{% block content %}{% endblock %}</main>
 
     <footer>
-      <!-- Add your footer content here -->
+      <span>&copy Provost 2024</span>
     </footer>
 
     {% block extra_scripts %}{% endblock %}
