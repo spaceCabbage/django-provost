@@ -33,3 +33,7 @@ AUTHENTICATION_BACKENDS = [
 ```sh
 $ python manage.py migrate
 ```
+
+## Usage
+
+we dont know how to use it yet, If you do, please let us know
