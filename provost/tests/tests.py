@@ -1,3 +1,7 @@
 from django.test import TestCase
+from provost.models import BaseObjectPermission
 
-# Create your tests here.
+
+class BaseObjectPermissionTest(TestCase):
+    def test(self):
+        pass

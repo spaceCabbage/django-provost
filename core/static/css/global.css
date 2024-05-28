@@ -39,14 +39,11 @@
 }
 
 body {
-  background-color: var(--background-color);
-  font-family: Arial, sans-serif;
+  font-family: mono-space;
   margin: 0;
   padding: 0;
-  color: var(--secondary-text-color);
 }
 header {
-  background-color: var(--primary-background-color);
 }
 
 nav {
@@ -56,19 +53,6 @@ nav {
   gap: 15px;
   width: 100%;
   padding: 30px 0;
-  color: var(--accent-color);
-}
-
-hr {
-  border: 1px solid var(--primary-border-color);
-}
-
-a {
-  color: var(--link-color);
-}
-
-a:hover {
-  color: var(--link-hover-color);
 }
 
 .main-margins {
@@ -76,15 +60,9 @@ a:hover {
   margin: 0 auto;
 }
 
-.rounded {
-  border-radius: 20px;
-}
-
 .comment {
   padding: 10px;
-  background-color: var(--primary-background-color);
   margin: 10px 0;
-  color: var(--tertiary-text-color);
 }
 
 .post-container {
@@ -98,23 +76,13 @@ a:hover {
 .post-title {
   font-size: 1.5em;
   font-weight: bold;
-  color: var(--primary-text-color);
 }
 
 .post-card {
   padding: 40px;
-  border: 1px solid var(--primary-border-color);
-  border-radius: 20px;
-  background-color: var(--primary-background-color);
-  box-shadow: 0 0 15px 8px rgba(0, 0, 0, 0.5);
-  transition: box-shadow 0.2s ease;
-}
-
-.post-card:hover {
-  box-shadow: 0 0 15px 3px rgba(0, 0, 0, 0.5);
+  border: 1px solid;
 }
 
 .post-content {
-  font-style: bold;
-  color: var(--primary-text-color);
+  font-weight: bold;
 }

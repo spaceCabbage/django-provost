@@ -21,7 +21,7 @@ we have no idea yet
 
 Run these commands to clone, install and setup your local development server
 
-> Note: for those using Windows you can replace occurences of the `python3` commands with `py`
+> Note: for those using Mac or Linux you must replace occurences of the `python` commands with `python3`
 
 ```sh
 # clone the repo
@@ -35,24 +35,24 @@ $ cd django-provost
 $ python3 -m venv venv
 $ source venv/bin/activate
 # windows
-$ py -m venv venv
+$ python -m venv venv
 $ venv\Scripts\activate
 
 # Install dependencies
 $ pip install -r requirements.txt
 
 # run migrations
-$ python3 manage.py migrate
+$ python manage.py migrate
 
 # create a superuser account for yourself
-$ python3 manage.py createsuperuser
+$ python manage.py createsuperuser
 
 # Generate fake user, post and comment data
-$ python3 manage.py populate
+$ python manage.py populate
 
 # And finally
 # Run the dev server
-$ python3 manage.py runserver
+$ python manage.py runserver
 
 ```
 
